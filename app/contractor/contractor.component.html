@@ -1,0 +1,40 @@
+<div class="col-md-12">
+<div class="col-md-4">
+    <div class="wrapper">
+`        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Contractor Dashboard </h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a [routerLink]="['/contractor/contractorhome']">Home</a>
+                </li>
+                <li>
+
+
+                    <a [routerLink]="['/contractor/addparking']">Add Parking Loat</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/contractor/setamount']">Set-Amount</a>
+                </li>
+
+                <li>
+                <a [routerLink]="['/contractor/customerlist']">Customer List</a>
+
+                </li>
+
+               
+				<li>
+                    <a [routerLink]="['/contractor/viewpayment']">View Payment</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/contractor/viewcredit']">View Credits</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="col-md-8" style="margin-left: -130px;font-size: 15px;">
+<router-outlet></router-outlet>
+</div>
+</div>

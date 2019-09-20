@@ -1,0 +1,28 @@
+<div class="col-md-12 col-xs-12 col-sm-12 navbar navbar-inverse navbar-fixed-top navclass">
+  <div class="row">
+    <div class="col-md-2 col-xs-2 col-sm-2 text-center">
+      <img src="/assets/images/icon.png" alt="gvigilance-logo" class="img-circle logocls">
+    </div>
+    <div class="col-md-8 col-xs-5 col-sm-7"></div>
+    <div class="col-md-2 col-xs-2 col-sm-2 text-center dropdown">
+      <button class="newsetcls" (click)="logout()">Logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="x" class="glyphicon glyphicon-log-out"></span></button>
+    </div>
+  </div>
+</div>
+<div class="col-md-3 col-xs-3 col-sm-3 sideclass"><br><br>
+ <!--  <div class="col-xs-12 content1 text-center">
+    <input type="file" name="front_photo" file-model="front_photo" ng-model="front_photo" class="form-control" id="photowidth">
+  </div>
+  <img src="{{foremandashboard.front_photo}}" class="memberimg" /> -->
+  <!-- </div> -->
+   <div class="rowforImage">
+                <input type="file" name="front_photo" file-model="front_photo" class="form-control" id="photowidth">
+                </div>
+                <img src="" class="memberimg" />
+  <p id="welcom">Welcome </p>
+  <div class="list">
+    <a [routerLink]="['/resellerdash/resellerhome']" onmouseover=""><span class="glyphicon glyphicon-home">&nbsp;Home</span></a><br><br>
+    <a [routerLink]="['/resellerdash/addcontractor']" onmouseover=""><i class="fa fa-user-plus symbol" aria-hidden="true">&nbsp;&nbsp;Add-Contractor</i></a>
+  </div>
+</div>
+<router-outlet></router-outlet>

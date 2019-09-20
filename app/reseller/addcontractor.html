@@ -1,0 +1,63 @@
+<app-resellerdashboard></app-resellerdashboard>
+<br><br><br><br><br><br>
+<!-- <div class="col-md-12 addcont">
+    <div>
+        <h1>Add Contractor</h1>
+        <form name="contractor" ng-submit="savecontractor(savecontractor1)" class="cont">
+            <label>
+                Enter Contractor Name
+            </label>
+            <br>
+            <input type="text" class="form-control" ng-model="savecontractor1.full_name" name="fullname" dont-begin-with-zero="a-z A-Z " ng-trim="false" no-repeat ng-required="true">
+            <div class="alert alert-danger" role="alert" ng-if="editform.fullname.$dirty  && editform.fullname.$error.required" id="executiveFormErrorStyle"> Please Enter Contractor Name</div>
+            <br>
+            <label>
+                Enter Contractor Number
+            </label>
+            <br>
+            <input type="text" class="form-control" name="alternatenumber" ng-model="savecontractor1.mobile" dont-begin-with-zero="mobilenumber" ng-required="true" minlength="10" maxlength="10">
+            <div class="alert alert-danger" role="alert" ng-if="(editform.alternatenumber.$dirty || submitted) && editform.alternatenumber.$error.required" id="executiveFormErrorStyle"> Invalid Number</div>
+            <span ng-if="message.length" style="color: red">    {{message}}
+</span>
+            <br>
+            <label for="panno" id="status">Email</label>
+            <input type="text" class="form-control" name="email_id" ng-model="savecontractor1.email_id" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z]{3,5}$/" required/>
+            <span ng-show="contractor.email_id.$invalid && contractor.email_id.$dirty" style="color:red;">Please Enter a Valid Email ID</span>
+            <br>
+            <label>Password</label>
+            <input type="password" name="password" ng-model="savecontractor1.password" class="form-control" id="alignCenter" ng-pattern="pass" required no-repeat>
+            <span ng-if="Executiveprofileform.password.$error.pattern" style="color:red">Valid Password Requires 6-20 Characters With One Number And Uppercase Character</span>
+            <br>
+            <center>
+                <button type="submit" class="btn btn-small btn-primary" data-toggle="modal" data-target="#myModal" style="background-color: #16446c;">Save</button>
+            </center>
+        </form>
+    </div>
+</div> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<div class="container">
+    <div class="col-md-offset-3 col-md-9 addcont">
+  <h2>Add Contractor</h2>
+  <form [formGroup]="addContractorForm" (ngSubmit)="addContractor()">
+    <div class="form-group">
+      <label >Enter Contractor Name</label>
+      <input type="email" class="form-control" id="email"  name="email">
+    </div>
+    <div class="form-group">
+      <label >Enter Contractor Number</label>
+      <input type="password" class="form-control" id="pwd" name="pwd">
+    </div>
+    <div class="form-group">
+      <label >Email</label>
+      <input type="email" class="form-control" id="email"  name="email">
+    </div>
+    <div class="form-group">
+      <label >Password</label>
+      <input type="email" class="form-control" id="email"  name="email">
+    </div>
+    <button type="submit" class="btn btn-primary" style="width: 100px;">Save</button>
+  </form>
+</div>
+</div>
+

@@ -1,0 +1,56 @@
+.headers{
+    font-size: 20px;
+    padding-right: 20px;
+}
+.contai{
+    margin-top: -10px;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .btn-primary {
+        padding: 7px;
+    }
+    .ex-buttons {
+        margin-top: 12px;
+        margin-bottom: 22px;
+    }
+    #searchBox {
+        margin-bottom: 24px;
+    }
+}
+.error_msg{
+    color:red;
+    font-size: 12px;
+}
+
+#fn,#ln,#cn{
+    text-transform: capitalize;
+    font-size: 14px;
+}
+#fname,#lname,#mob,#em,#cname,#cadd,#pass{
+     font-size: 14px;
+}
+.btn-primary{
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+
+}
+.table{
+    font-size: 12px;
+    font-family:  Helvetica;
+}
+input[type=text],[type=email],[type=password]{
+    width: 550px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #1d4391; 
+}
+textarea[type=text]{
+     width: 550px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #1d4391; 
+}
+
+
+

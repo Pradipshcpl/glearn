@@ -1,0 +1,35 @@
+
+<app-resellerdashboard></app-resellerdashboard>
+<br><br><br><br><br><br>
+<h3 id="adminwelcome">Welcome To Reseller Dashboard</h3>
+<div class="col-xs-6 col-sm-6 col-md-6 entityperpage">
+  <label for="Items Per Page">Entity Per Page</label>
+  <select style="width:70px; margin-left: 0px;" ng-model="usersPerPage" class="form-control" ng-change="size3(usersPerPage)">
+    <option></option>
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+    <option value="25">25</option>
+    <option value="30">30</option>
+    <option value="50">50</option>
+  </select>
+</div>
+<div class="custlist2">
+  <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
+    <table>
+      <tbody>
+        <tr dir-paginate="reseller in resellerdata|itemsPerPage: usersPerPage" total-items="totalUsers" current-page="pagination.current" pagination-id="paginate123">
+          <div class="col-md-3 col-sm-4 col-xs-6" ng-repeat="reseller in resellerdata">
+            <h4 style="text-align: center;"></h4>
+            <div class="text-center" id="adminhomecircle" ng-click="contractorsdetails11(1,reseller.id)">
+              <div class="row abc">
+                <span><br> </span>
+              </div>
+            </div>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

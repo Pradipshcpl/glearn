@@ -1,0 +1,70 @@
+
+
+<!-- <h1>No parking is available</h1> -->
+
+<!-- 
+    <div class="manageSecurities">
+        <div class=" panel-heading maintenance-head">
+            <button class="btn btn-small btn-primary" ng-click="addpark()" style=" background-color: #16446c;">
+                <i class="glyphicon glyphicon-plus"></i> Add
+            </button>
+            <h2>Parking Lot Details</h2>
+        </div>
+    </div> -->
+    <button type="button" class="btn btn-primary-outline pull-right" (click)="btnClick();" style="float: left;"><i class="fa fa-plus"></i> Add</button>    
+    <div class="col-xs-12 col-sm-12 col-md-12">
+
+
+    	
+        <div class="row">
+        	</div>
+
+
+            
+      
+        <h1 style="color: blue; text-align: center ;margin-top: 20px;"> Parking Details</h1>
+        <div class="custlist1">
+            <div class="table-responsive table-responsive-drp">
+            <table class="job-lists-table mobile-stores-table table table-bordered">
+                    <thead style="background-color: #70b0b1;" >
+                        <tr class="tableTextCenter">
+                            <th >Parking Lot Id</th>
+                            <th >Parking Lot Name</th>
+                            <th >Parking Lot Address</th>
+                            <th >Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr *ngFor="let security of parkingLots" class="tableTextCenter">
+                       <!--  <tr class="tableTextCenter" dir-paginate="security in parkinglots|itemsPerPage: usersPerPage" total-items="totalUsers" current-page="pagination.current" pagination-id="paginate12"> -->
+                            <td>
+                                
+                                    {{security.parkingid}}
+                                
+                            </td>
+                            <td>
+                               
+                                    {{security.parkinglotname}}
+                                
+                            </td>
+                            <td>
+                               
+                                    {{security.parkinglotaddress}}
+                               
+                            </td>
+                            <td>
+                                <div class="myButtondelete" (click)="securityid1(security.parkingid)">
+                                    <a class="btn btn-small btn-danger "><i class="glyphicon glyphicon-remove" ></i>Delete</a>
+                                    <a class="btn btn-small btn-primary" (click)="editlotDetails(security)"><i class="glyphicon glyphicon-edit"></i>Edit</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               <!--  <p ng-hide="parkingLots.length>0">No Parking Lots Found.</p> -->
+            </div>
+        </div>
+       
+    </div>
+
+

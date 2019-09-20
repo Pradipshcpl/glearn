@@ -1,0 +1,83 @@
+
+<!-- 
+<div class="example-container">
+  
+
+<div class ="col-md-6">
+  <mat-form-field
+      
+      >
+    <input matInput placeholder="Parking Id" [(ngModel)]="comp1Val.parkingid" required readonly="status3">
+  </mat-form-field>
+</div>
+<div class="col-md-6">
+   <mat-form-field>
+    <input matInput placeholder="Parking Name" [(ngModel)]="comp1Val.parkinglotname" required readonly="status3">
+  </mat-form-field>
+</div>
+<div class="col-md-6">
+  <mat-form-field >
+    <mat-label>Parking Address</mat-label>
+    <input matInput placeholder="Simple placeholder" [(ngModel)]="comp1Val.parkinglotaddress" readonly="status3">
+  </mat-form-field>
+</div>
+ <button class="btn info buttonss" style="color: white;
+      background-color: #ec971f;"
+    *ngIf="status3" (click)="editable1(comp1val);">
+    <mat-icon>edit </mat-icon>Edit</button>
+
+
+ 
+</div>
+ -->      
+<div class="editdiv">
+
+        
+            <button class="btn btn-primary editbutton" *ngIf="!comp1Val.edit" [disabled]="comp1Val.edit" (click)="comp1Val.edit = !comp1Val.edit">Edit</button>
+            
+             
+          
+          
+          <button class="btn btn-primary editbutton1 cancelbutton" *ngIf="comp1Val.edit" [disabled]="!comp1Val.edit" (click)="onNoClick()">Cancel</button>
+          <button class="btn btn-primary editbutton1" *ngIf="comp1Val.edit" [disabled]="!comp1Val.edit" (click)="savememberdetails(comp1Val)">Save</button>
+      
+      </div>
+   
+<div class="tableborder">
+  <div class="table-responsive">
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="pd">
+        <table class="table  table-striped">
+          <thead>
+            <tr>
+              <td colspan="2"><b>Parking DETAILS</b></td>
+            </tr>
+          </thead>
+          <tbody class="tableText text-center">
+            <tr>
+              <th style="width: 50%;">Parking Id</th>
+              <th>
+                <input type="text" [ngClass]="{'noeditable': !comp1Val.edit, 'editing': comp1Val.edit}" [(ngModel)]="comp1Val.parkingid" [disabled]="!comp1Val.edit" readonly>
+              </th>
+            </tr>
+            <tr>
+              <th>Parking Name</th>
+              <th>
+                <input type="text" [ngClass]="{'noeditable': !comp1Val.edit, 'editing': comp1Val.edit}" [disabled]="!comp1Val.edit" [(ngModel)]="comp1Val.parkinglotname">
+              </th>
+            </tr>
+            <tr>
+              <th>Parking Address</th>
+              <th>
+                <input  type="text" [ngClass]="{'noeditable': !comp1Val.edit, 'editing': comp1Val.edit}" [(ngModel)]="comp1Val.parkinglotaddress" [disabled]="!comp1Val.edit">
+                 
+                
+              </th>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+     </div>
+   </div>
+ </div>

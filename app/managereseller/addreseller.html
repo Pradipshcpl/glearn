@@ -1,0 +1,90 @@
+<app-admindashboard></app-admindashboard>
+<div class="col-md-offset-3 ">
+    <div class="col-md-12">
+        <!-- <div class="col-md-5"> -->
+            <br><br><br><br><br><br><br><br><br>
+            <div class="panel-head text-center executivestyle">
+                <h3 style="font-size: 24px;margin-right: 250px;"><b>Add Reseller</b></h3>
+            <!-- </div> -->
+        </div>
+    </div><br><br>
+    <div class="col-md-offset-2 col-md-6 contai">
+        <div class="container-fluid">
+            <form [formGroup]="addResellerForm" (ngSubmit)="addResellers()" >
+                <div class="form-group">
+                    <div class="row">
+                    <label id="fname">First Name</label>
+                    <input id="fn" type="text" formControlName="firstName"  placeholder="First Name" class="form-control" (keypress)="keyPress1($event)" [ngClass]="{'is-invalid':submitted && f.firstName.errors}" > 
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                     <div *ngIf="f.firstName.errors.required"class="error_msg">First Name is required</div>
+                    </div>
+                   </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                    <label id="lname">Last Name</label>
+                    <input id="ln"  type="text" formControlName="lastName" (keypress)="keyPress1($event)"     [ngClass]="{'is-invalid':submitted && f.lastName.errors}" placeholder="Last Name" class="form-control">
+                    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastName.errors.required" class="error_msg">Last Name is required</div>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                    <label id="em">Email</label>
+                    <input  type="email" class="form-control" formControlName="email" [ngClass]="{'is-invalid':submitted && f.email.errors}" placeholder="Enter Email" style="font-size: 14px;">
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required" class="error_msg">Email Id is required</div>
+                        <div *ngIf="f.email.errors.email" class="error_msg">Email id is not valid</div>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                    <label id="mob">Mobile Number</label>
+                    <input type="text"  formControlName="mobilenumber" [ngClass]="{'is-invalid':submitted && f.mobilenumber.errors}" minlength="10" maxlength="10" class="form-control" (keypress)="keyPress($event)" placeholder="Mobile Number" pattern="[6-9]{1}[0-9]{9}" style="font-size: 14px;"/>
+                    <div *ngIf="submitted && f.mobilenumber.errors" class="invalid-feedback">
+                        <div *ngIf="f.mobilenumber.errors.required" class="error_msg">Mobile number required</div>
+                        <div *ngIf="f.mobilenumber.errors.minlength" class="error_msg">Mobile number must be 10 digits</div>
+                        <div *ngIf="f.mobilenumber.errors.pattern" class="error_msg">Mobile number is invalid </div>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="row">
+                    <label id="pass">Password</label>
+                    <input type="password" formControlName="password" [ngClass]="{'is-invalid':submitted && f.password.errors}" class="form-control" placeholder="Enter Password" autocomplete="new-password" style="font-size: 14px;"/>
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required" class="error_msg">Password is mandatory</div>
+                        <div *ngIf="f.password.errors.minlength" class="error_msg">Password must be at least 6 characters</div>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                    <label id="cname">Company Name</label>
+                <input type="text" id="cn" formControlName="companyName" [ngClass]="{'is-invalid':submitted && f.companyName.errors}" placeholder="company name" class="form-control" />
+                <div *ngIf="submitted && f.companyName.errors" class="invalid-feedback">
+                    <div *ngIf="f.companyName.errors.required" class="error_msg">Company Name is required</div>
+                </div>
+            </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                <label id="cadd">Company Address</label>
+                <textarea  type="text" rows="3" cols="30" class="form-control" placeholder="Address"formControlName="companyAddress" [ngClass]="{'is-invalid':submitted && f.companyAddress.errors}" style="height: 80px;" style="font-size: 14px;"></textarea>
+                <div *ngIf="submitted && f.companyAddress.errors" class="invalid-feedback">
+                    <div *ngIf="f.companyAddress.errors.required" class="error_msg">Company Address is required</div>
+                </div>
+                </div>
+            </div>
+                <br>
+                 <div class="form-group text-center">
+                    <button type="submit" class="btn btn-small btn-primary" >Submit</button>
+                 </div>
+            </form>
+        </div>
+    </div>
+</div>

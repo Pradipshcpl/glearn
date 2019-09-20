@@ -1,0 +1,51 @@
+        <div class="row">
+        	</div>
+
+
+            
+      
+        <h1 style="color: blue; text-align: center ;margin-top: 20px;"> Set Amount Table</h1>
+        <div class="custlist1">
+            <div class="table-responsive table-responsive-drp">
+            <table class="job-lists-table mobile-stores-table table table-bordered">
+                    <thead style="background-color: #70b0b1;" >
+                        <tr class="tableTextCenter">
+                            <th >Parking Lot Id</th>
+                            <th >Parking Lot Name</th>
+                            <th >Parking Lot Address</th>
+                            <th >Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr *ngFor="let price of parking" class="tableTextCenter">
+                       <!--  <tr class="tableTextCenter" dir-paginate="security in parkinglots|itemsPerPage: usersPerPage" total-items="totalUsers" current-page="pagination.current" pagination-id="paginate12"> -->
+                            <td>
+                                
+                                    {{price.parkingid}}
+                                
+                            </td>
+                            <td>
+                               
+                                    {{price.parkinglotname}}
+                                
+                            </td>
+                            <td>
+                               
+                                    {{price.parkinglotaddress}}
+                               
+                            </td>
+                            <td>
+                                
+                                 
+                                    <a class="btn btn-small btn-primary" (click)="setamount()"><i class="glyphicon glyphicon-edit"></i>Setamount</a>
+                               
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               <!--  <p ng-hide="parkingLots.length>0">No Parking Lots Found.</p> -->
+            </div>
+        </div>
+
+       
+ 

@@ -1,0 +1,75 @@
+      
+      <div class="col-md-offset-3  reseller">
+
+      	<br><br><br><br><br><br><br><br><br>
+            <div class="headers">
+                <span>Resellers</span>
+                <button class="btn btn-small btn-primary" (click)="addreseller()" style="float: right; background-color: #16446c;">
+                    <i class="glyphicon glyphicon-plus"></i> Add
+                </button>
+           
+        </div>
+            <hr class="maintenace-head-border">
+            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                <!-- <div class="row"> -->
+                    <label for="Items Per Page">Entity Per Page</label>
+                    <select style="width:70px; margin-left: 6px;" ng-model="usersPerPage" class="form-control" ng-change="size4(usersPerPage)">
+                    	<option ></option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="50">50</option>
+                    </select><br><br>
+                <!-- </div> -->
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered table " cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>FIRST NAME</th>
+                                    <th>LAST NAME</th>
+                                    <th>EMAIL</th>
+                                    <th>MOBILE NO</th>
+                                    <th>COMPANY NAME</th>
+                                    <th>COMPANY ADDRESS</th>
+                                    <th>ROLE</th>
+                                    <!--<th>ACTION</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let resel of resellerdata">
+
+                                    <td>{{resel.first_name}}</td>
+                                    <td>{{resel.last_name}}</td>
+                                    <td>{{resel.email_id}}</td>
+                                    <td>{{resel.mobile}}</td>
+                                    <td>{{resel.company_name}}</td>
+                                    <td>{{resel.company_address}}</td>
+                                    <td>{{resel.role}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="modal fade" id="deleteConfirmationModal" role="dialog" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+    <div class="modal-dialog modal-vertical-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Delete Parmanently</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are You Sure You Want To Delete This Record</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="currentExecutive = null" data-dismiss="modal">Cancel</button>
+                <a type="button" data-dismiss="modal" class="btn btn-danger" ng-click="delete()">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
